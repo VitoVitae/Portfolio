@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "Donner un numéro de département: " dept
+egrep $dept depts | uniq
+
+

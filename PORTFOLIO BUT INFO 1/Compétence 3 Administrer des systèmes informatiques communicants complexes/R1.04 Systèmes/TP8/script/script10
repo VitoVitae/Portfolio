@@ -1,0 +1,3 @@
+#!/bin/bash
+read -p "Entrée un nom de fichier : " fichier
+touch "$fichier"

@@ -1,0 +1,9 @@
+#!/bin/bash
+for i in A B C
+do
+mkdir folder$i
+for fic  in TODO.txt README.md main.c
+do
+touch folder$i/$fic
+done
+done

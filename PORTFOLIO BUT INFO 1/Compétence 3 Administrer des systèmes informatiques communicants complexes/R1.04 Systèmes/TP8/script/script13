@@ -1,0 +1,5 @@
+#!/bin/bash
+for variable in 'test123' 'abc' '_def' 'toto.old'
+do
+	touch $variable
+done

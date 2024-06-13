@@ -1,0 +1,3 @@
+#!/bin/bash
+read -p "Ecrire le nom du fichier texte : " fichier
+touch "$fichier".txt

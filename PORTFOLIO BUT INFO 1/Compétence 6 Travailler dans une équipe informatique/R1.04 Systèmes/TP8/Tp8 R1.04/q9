@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in dir1 docs docs/backup
+do
+mkdir $i
+done

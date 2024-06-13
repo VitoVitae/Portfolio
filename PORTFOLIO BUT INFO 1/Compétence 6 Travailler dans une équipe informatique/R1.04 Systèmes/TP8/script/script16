@@ -1,0 +1,5 @@
+#!/bin/bash
+for dossier in 'text.txt' "l'autre.md" 'prog.c'
+do
+	touch $dossier
+done

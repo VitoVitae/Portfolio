@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in test123 abc _def toto.old
+do
+mkdir  $i
+done
