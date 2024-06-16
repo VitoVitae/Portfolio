@@ -1,5 +1,0 @@
-#!/bin/bash
-for dossier in 'dir1' 'doss.old' 'docs' 'docs/backup'
-do
-	mkdir $dossier
-done

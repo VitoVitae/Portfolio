@@ -1,4 +1,0 @@
-#!/bin/bash
-read -p "Donner texte: " txt
-read -p "Donner champ: " champ
-
