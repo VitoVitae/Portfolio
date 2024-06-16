@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="authentification des utilisateurs au site web">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>login</title>
+</head>
+
+<body class="login bg_nuage">
+  <div>
+    <form action="/traitement.php" method="post">
+      <label for="">Connexion</label>
+      <div>
+        <input type="text" name="identifiant_conx" placeholder="Identifiant" id="id_conx">
+        <input type="password" name="mot_de_pass_conx" placeholder="Mot de passe" id="mdp_conx">
+      </div>
+      <div class="box_link">
+        <label class="lien_login">Vous n'avez pas de compte ?</label>
+        <input type="submit" value="Connexion" name="Connexion_Test" id="submit_conx">
+      </div>
+    </form>
+    <form action="/traitement.php" method="post">
+      <label for="">Inscription</label>
+      <div>
+        <input type="text" name="identifiant_inscr" placeholder="Identifiant" id="id_inscr">
+        <input type="text" name="nom_inscr" placeholder="Nom" id="nom_inscr">
+        <input type="text" name="prenom_inscr" placeholder="Prénom" id="prenom_inscr">
+        <input type="email" name="email_inscr" placeholder="Courriel" id="email_inscr">
+        <input type="password" name="mot_de_pass_inscr" placeholder="Mot de passe" id="mdp_inscr">
+        <input type="password" name="confirmation_inscr" placeholder="Confirmer le mot de passe" id="conf_mdp_inscr">
+      </div>
+      <div class="box_link">
+        <label class="lien_login">Vous avez un compte ?</label>
+        <input type="submit" value="Inscription" name="Inscription_Test" id="submit_inscr">
+      </div>
+    </form>
+  </div>
+  <div>
+    <h1>Météo</h1>
+    <a href="admin/page_admin.php">Admin</a>
+  </div>
+  <script>
+    const lien = document.querySelectorAll(".lien_login");
+    const body = document.querySelector(".login");
+    const form_connexion = document.querySelector("form:nth-child(1)");
+    const form_inscription = document.querySelector("form:nth-child(2)");
+    const h1 = document.querySelector(".login > div:nth-child(2)");
+
+    lien.forEach(element => {
+      element.addEventListener("click", () => {
+        body.classList.toggle("body_right");
+        form_connexion.classList.toggle("form_left");
+        form_inscription.classList.toggle("form_right");
+        h1.classList.toggle("h1_right")
+      });
+    });
+
+
+    // Désactiver les boutons valider
+    const root = document.querySelector(":root");
+
+    // input connexion
+    const id_conx = document.getElementById('id_conx');
+    const mdp_conx = document.getElementById('mdp_conx');
+    const submit_conx = document.getElementById('submit_conx');
+
+    // input inscription
+    const id_inscr = document.getElementById('id_inscr');
+    const mdp_inscr = document.getElementById('mdp_inscr');
+    const conf_mdp_inscr = document.getElementById('conf_mdp_inscr');
+    const submit_inscr = document.getElementById('submit_inscr');
+
+    function check_connexion() {
+      if (id_conx.value.trim() === '' || mdp_conx.value.trim() === '') {
+        submit_conx.disabled = true;
+        root.style.setProperty("--clr-button-conx-enable--", "#aaa");
+        root.style.setProperty("--clr-hvr-button-conx-enable--", "#aaa");
+        root.style.setProperty("--clr-actv-button-conx-enable--", "#aaa");
+      } else {
+        submit_conx.disabled = false;
+        root.style.setProperty("--clr-button-conx-enable--", "rgb(32, 146, 32)");
+        root.style.setProperty("--clr-hvr-button-conx-enable--", "rgb(76, 197, 76)");
+        root.style.setProperty("--clr-actv-button-conx-enable--", "rgb(28, 90, 28)");
+      }
+    }
+
+    function check_inscription() {
+      if (id_inscr.value.trim() === '' || mdp_inscr.value.trim() === '' || conf_mdp_inscr.value.trim() === '') {
+        submit_inscr.disabled = true;
+        root.style.setProperty("--clr-button-incr-enable--", "#aaa");
+        root.style.setProperty("--clr-hvr-button-incr-enable--", "#aaa");
+        root.style.setProperty("--clr-actv-button-incr-enable--", "#aaa");
+      } else {
+        submit_inscr.disabled = false;
+        root.style.setProperty("--clr-button-incr-enable--", "rgb(32, 146, 32)");
+        root.style.setProperty("--clr-hvr-button-incr-enable--", "rgb(76, 197, 76)");
+        root.style.setProperty("--clr-actv-button-incr-enable--", "rgb(28, 90, 28)");
+      }
+    }
+
+    check_connexion();
+    check_inscription();
+
+    id_conx.addEventListener('input', check_connexion);
+    mdp_conx.addEventListener('input', check_connexion);
+
+    id_inscr.addEventListener('input', check_inscription);
+    mdp_inscr.addEventListener('input', check_inscription);
+    conf_mdp_inscr.addEventListener('input', check_inscription);
+
+    form_connexion.addEventListener('submit', (e) => {
+      if (submit_conx.disabled) {
+        e.preventDefault();
+      }
+    });
+
+    form_inscription.addEventListener('submit', (e) => {
+      if (submit_inscr.disabled) {
+        e.preventDefault();
+      }
+    });
+
+  </script>
+</body>
+
+</html>
