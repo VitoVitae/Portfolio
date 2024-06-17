@@ -1,5 +1,0 @@
-#!/bin/bash
-for dossier in A B C
-do
-mkdir folder"$dossier"
-done

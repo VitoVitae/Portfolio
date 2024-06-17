@@ -1,3 +1,0 @@
-#!/bin/bash
-read -p "Le nom du fichier à créer: " fic
-touch ${fic}_old
