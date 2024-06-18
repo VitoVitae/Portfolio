@@ -1,4 +1,6 @@
-# Installation de services réseau
+# Exploitation d'une base de données
 
-Projet d'installation de serveur Web apache avec quelques notions de PHP et MySQL avec Nominoe Barbotaud.
+Projet de conception et peuplement de base de donnée avec de l'analyse statistique.
+
+Project effectué en groupe avec Marius Chartier--Le Goff.
 
