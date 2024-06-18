@@ -4,8 +4,6 @@ Sujet choisi : problème des N reines
 
 **Équipe**&nbsp;: Mattéo Kervadec, Raphaël Bardini, Marius Chartier--Le Goff, Paolo Toé
 
-- [Documentation](/doc/algorithmes.md)
-
 ## Programmes
 
 - solve.py&nbsp; : résout le problème des N reines
