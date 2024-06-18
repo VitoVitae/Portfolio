@@ -5,8 +5,6 @@ Sujet choisi : problème des N reines
 **Équipe**&nbsp;: Mattéo Kervadec, Raphaël Bardini, Marius Chartier--Le Goff, Paolo Toé
 
 - [Documentation](/doc/algorithmes.md)
-- [Compte-rendu](/doc/S2.02%20Compte-Rendu.pdf)
-- [Diaporama soutenance](/doc/Diaporama%20soutenance.pdf)
 
 ## Programmes
 
