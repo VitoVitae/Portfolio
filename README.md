@@ -1,6 +1,6 @@
 # Portfolio
 
-Hello welcome to my portfolio!
+Hello, welcome to my portfolio!
 
 This portfolio us divided into my university school years and further divided into skills.
 
