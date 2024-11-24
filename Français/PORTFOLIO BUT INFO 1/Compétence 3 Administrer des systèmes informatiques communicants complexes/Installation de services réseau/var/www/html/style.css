@@ -1,0 +1,373 @@
+* {
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+
+:root {
+    --clr-button-conx-enable--: rgb(32, 146, 32);
+    --clr-hvr-button-conx-enable--: rgb(76, 197, 76);
+    --clr-actv-button-conx-enable--: rgb(28, 90, 28);
+    --clr-button-incr-enable--: rgb(32, 146, 32);
+    --clr-hvr-button-incr-enable--: rgb(76, 197, 76);
+    --clr-actv-button-incr-enable--: rgb(28, 90, 28);
+}
+
+body {
+    margin: 0;
+}
+
+.bg_nuage {
+    background-color: teal;
+    background-image: url("/img/nuage/ciel.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    background-position: left;
+    overflow-x: hidden;
+    position: relative;
+    transition: 2s all;
+}
+
+/* ##### Page de connection ##### */
+
+.login > div:nth-child(2) {
+    position: absolute;
+    left: 70%;
+    top: 200px;
+    transition: 1.5s all;
+}
+
+.login h1 {
+    color: white;
+    font-size: 3.5em;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.login > div:nth-child(2) a {
+    color: blue;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    margin-top: 150px;
+    margin-left: -160px;
+    transition: .5s all;
+    &:hover {
+        color: lightblue;
+    }
+}
+
+.login > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.body_right {
+    background-position: center;
+}
+
+form:nth-child(1) {
+    left: 5%;
+}
+
+form:nth-child(2) {
+    left: 100%;
+}
+
+.form_left {
+    transform: translateX(-150%);
+}
+
+.form_right {
+    transform: translateX(-120%);
+}
+
+.h1_right {
+    transform: translateX(-380%);
+}
+
+form {
+    border: 3px solid rgb(0, 212, 212);
+    box-shadow: rgb(0, 58, 58) 15px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    transition: 1.5s all;
+
+    &:hover {
+        box-shadow: rgb(0, 58, 58) 8px 8px;
+    }
+}
+
+form > label {
+    margin-left: 28%;
+    font-size: 1.5em;
+}
+
+form div:nth-child(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+
+.box_link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box_link input {
+    color: #fff;
+    transition: .5s background-color;
+}
+
+#submit_conx {
+    background-color: var(--clr-button-conx-enable--);
+
+    &:hover {
+        background-color: var(--clr-hvr-button-conx-enable--);
+    }
+
+    &:active {
+        background-color: var(--clr-actv-button-conx-enable--);
+    }
+}
+
+#submit_inscr {
+    background-color: var(--clr-button-incr-enable--);
+
+    &:hover {
+        background-color: var(--clr-hvr-button-incr-enable--);
+    }
+
+    &:active {
+        background-color: var(--clr-actv-button-incr-enable--);
+    }
+}
+
+.lien_login {
+    color: rgb(50, 196, 244);
+    font-size: .9em;
+    transition: .5s all;
+
+    &:hover {
+        color: rgb(56, 60, 186);
+        border-bottom: 1px solid rgb(56, 60, 186);
+    }
+}
+
+.erreur404 {
+    background-image: url("img/nuage/nuage.png");
+    background-repeat: no-repeat;
+    background-position: 50% 7.5%;
+    background-size: 120%;
+    size: inherit;
+}
+
+@keyframes rotation_bg {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+}
+
+.back_index {
+    color: #fff;
+    background-color: #444;
+    box-shadow: #333 10px 10px;
+    text-shadow: black 5px 5px;
+    padding: 20px;
+    font-size: 50px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    text-decoration: none;
+    transition: .5s all;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* ##### Erreur 404 #####*/
+
+.erreur404 p {
+    color: #fff;
+    text-shadow: black 5px 5px;
+    font-size: 60px;
+    font-family: Helvetica, Arial, sans-serif;
+    height: auto;
+    width: fit-content;
+    position: absolute;
+    left: 80px;
+    top: -20px;
+    padding: 20px;
+    border: #444 5px solid;
+    border-radius: 50px;
+    backdrop-filter: blur(50px);
+    box-shadow: #866 10px 10px;
+    transition: .5s all;
+    text-align: center;
+    animation: 10s rotation_bg;
+}
+
+/* ##### Page Météo ##### */
+
+header {
+    height: auto;
+    text-align: center;
+}
+
+header > div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header > div:nth-child(1) {
+    background-color: teal;
+    background-image: url("/img/nuage/ciel.jpg");
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header div + div {
+    background-color: brown;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header div + div > *{
+    margin-inline: 15px;
+    padding: 5px;
+}
+
+.meteo h1 {
+    font-size: 1.5em;
+    text-decoration: underline;
+    color: white;
+    backdrop-filter: blur(20px);
+    border: 3px solid black;
+    border-radius: 15px;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    box-shadow: teal -5px 5px;
+    padding: 15px;
+}
+
+header > div:nth-child(1) h2 {
+    margin-top: -15px;
+    color: white;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+footer {
+    padding: 15px;
+    background-color: rgb(1, 25, 70);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: .5s all;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+footer img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px lightblue solid;
+}
+
+footer figure {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* modif pour page_admin.php============================================= */
+#connecté{
+    background-color:aquamarine;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#connecté  >* {
+    margin: 20px;
+    padding: 5px;
+}
+
+#connecté a,.button{
+    border:solid 3px #8d5;
+    background-color: darkorange; 
+    text-decoration : none;
+}
+
+
+#acceuil{
+    display: flex;
+    flex-direction: column;
+}
+
+#pub{
+    
+    display: flex;
+    flex-direction: row;
+}
+#pub div{
+    border:solid 1em #866;
+    width: 50%;
+    background-color: blue;
+    
+}
+#pub p{ 
+    color: #fff;
+
+}
+
+#acceuil img{
+    width: 100%;
+   
+}
+
+

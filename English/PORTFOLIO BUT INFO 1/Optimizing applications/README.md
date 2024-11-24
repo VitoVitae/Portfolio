@@ -1,0 +1,3 @@
+# Optimizing applications
+
+Optimizing applications according to specific criteria : execution time, precision, resource consumption...
